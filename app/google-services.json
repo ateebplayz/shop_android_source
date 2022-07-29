@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "126953993968",
+    "project_id": "bismillah-supermarket",
+    "storage_bucket": "bismillah-supermarket.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:126953993968:android:f18feb1d55cc670b03b435",
+        "android_client_info": {
+          "package_name": "com.sunnycsb.bismillahsuperstore"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "126953993968-2qib4ff9qr3p31d4jqm48ip9vnqeo2ce.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.sunnycsb.bismillahsuperstore",
+            "certificate_hash": "016853b60c789f6eaec16f383b6c9c8f47e03d94"
+          }
+        },
+        {
+          "client_id": "126953993968-emlvm4mgih0b4cb51rev81ggcmkui3fk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDOl6d84K6BWs4mk7winkRRdf5eY8lOYdM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "126953993968-emlvm4mgih0b4cb51rev81ggcmkui3fk.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
