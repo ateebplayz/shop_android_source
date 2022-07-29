@@ -77,7 +77,7 @@ public class LoginActivity extends AppCompatActivity {
                         Log.d("Phone", "Phone passed!");
                         if(usersData.getPassword().equals(password)) {
                             Log.d("Password", "Password passed!");
-                            Toast.makeText(LoginActivity.this, "Welcome", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(LoginActivity.this, "Welcome " + usersData.getName(), Toast.LENGTH_SHORT).show();
                             loadingBar.dismiss();
                             Intent intent = new Intent(LoginActivity.this, MenuActivity.class);
                             startActivity(intent);
