@@ -17,13 +17,18 @@ import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.rey.material.widget.CheckBox;
 import com.sunnycsb.bismillahsuperstore.Model.Users;
+import com.sunnycsb.bismillahsuperstore.Prevalent.Prevalent;
+
+import io.paperdb.Paper;
 
 public class LoginActivity extends AppCompatActivity {
 
     private EditText InputNumber, InputPassword;
     private Button LoginButton;
     private ProgressDialog loadingBar;
+    private CheckBox LoginCheckboxRememberMe;
 
     private String DBName = "Users";
     @Override
@@ -35,6 +40,8 @@ public class LoginActivity extends AppCompatActivity {
         InputPassword = (EditText) findViewById(R.id.login_edittxt_password);
         InputNumber = (EditText) findViewById(R.id.login_edittxt_phonenumber);
         loadingBar = new ProgressDialog(this);
+        LoginCheckboxRememberMe = (CheckBox) findViewById(R.id.login_checkbox_remember);
+        Paper.init(this);
 
         LoginButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -64,6 +71,11 @@ public class LoginActivity extends AppCompatActivity {
         }
     }
     private void ValidateCredsLogin(final String phone,final String password) {
+
+        if(LoginCheckboxRememberMe.isChecked()) {
+            Paper.book().write(Prevalent.UserPhoneKey, phone);
+            Paper.book().write(Prevalent.UserPasswordKey, password);
+        }
         final com.google.firebase.database.DatabaseReference RootRef;
         RootRef = FirebaseDatabase.getInstance().getReference();
 
